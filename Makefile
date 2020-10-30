@@ -52,9 +52,12 @@ clean: clean-cpp
 
 
 ##### some convinient rules #####
-
-USERPROG := obj/testcase/mov
-ENTRY := $(USERPROG)
+	--- Makefile
+	+++ Makefile
+	@@ -55,2 +55,2 @@
+	-USERPROG = obj/testcase/mov
+	+USERPROG = obj/testcase/mov-c
+	ENTRY = $(USERPROG)
 
 entry: $(ENTRY)
 	objcopy -S -O binary $(ENTRY) entry
