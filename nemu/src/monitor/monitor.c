@@ -23,6 +23,12 @@ static void welcome() {
 			exec_file);
 }
 
+static void init_eflags() {
+
+	cpu.EFLAGS = 2;
+
+}
+
 void init_monitor(int argc, char *argv[]) {
 	/* Perform some global initialization */
 
@@ -89,4 +95,5 @@ void restart() {
 
 	/* Initialize DRAM. */
 	init_ddr3();
+	init_eflags();
 }
