@@ -26,6 +26,7 @@
 #include "trans/call.h"
 #include "data-mov/push.h"
 #include "logic/test.h"
+#include "trans/je.h"
 
 #include "string/rep.h" 
 
