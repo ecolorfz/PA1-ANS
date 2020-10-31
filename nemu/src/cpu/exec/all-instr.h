@@ -23,6 +23,9 @@
 #include "logic/shr.h"
 #include "logic/shrd.h"
 
+#include "trans/call.h"
+ 
+
 #include "string/rep.h"
 
 #include "misc/misc.h"
