@@ -34,7 +34,7 @@ static void do_execute() {
 
 	cpu.PF=!(result & 1);
 
-	//print_asm_no_template2();
+	print_asm_no_template2();
 
 }
 

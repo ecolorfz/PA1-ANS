@@ -14,7 +14,7 @@ static void do_execute () {
 
 	swaddr_write (reg_l (R_ESP) , 4 , op_src->val);
 
-	//print_asm_no_template1();
+	print_asm_no_template1();
 
 }
 
