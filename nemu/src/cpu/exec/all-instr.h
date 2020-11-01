@@ -28,6 +28,7 @@
 #include "data-mov/push.h"
 #include "logic/test.h"
 #include "trans/je.h"
+#include "data-mov/pop.h"
 
 #include "string/rep.h" 
 
