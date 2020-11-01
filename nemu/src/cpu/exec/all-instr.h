@@ -29,6 +29,7 @@
 #include "logic/test.h"
 #include "trans/je.h"
 #include "data-mov/pop.h"
+#include "trans/ret.h"
 
 #include "string/rep.h" 
 
