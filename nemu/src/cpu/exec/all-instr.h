@@ -31,6 +31,7 @@
 #include "trans/call.h"
 #include "data-mov/push.h"
 #include "logic/test.h"
+#include "logic/setne.h"
 #include "trans/je.h"
 #include "trans/jmp.h"
 #include "trans/jbe.h"
