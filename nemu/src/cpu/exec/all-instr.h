@@ -38,6 +38,7 @@
 #include "trans/jbe.h"
 #include "trans/jle.h"
 #include "trans/jg.h"
+#include "trans/jl.h"
 #include "data-mov/pop.h"
 #include "trans/ret.h"
 
