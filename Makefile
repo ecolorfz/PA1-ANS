@@ -56,7 +56,7 @@ clean: clean-cpp
 	+++ Makefile
 	@@ -56,2 +56,2 @@
 
-USERPROG = obj/testcase/bubble-sort
+USERPROG = obj/testcase/fact
 ENTRY := $(USERPROG)
 
 entry: $(ENTRY)
