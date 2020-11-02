@@ -32,6 +32,7 @@
 #include "data-mov/push.h"
 #include "logic/test.h"
 #include "trans/je.h"
+#include "trans/jmp.h"
 #include "data-mov/pop.h"
 #include "trans/ret.h"
 

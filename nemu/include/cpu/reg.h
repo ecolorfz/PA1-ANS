@@ -15,6 +15,28 @@ enum { R_ES, R_CS, R_SS, R_DS, R_FS, R_GS };
  * For more details about the register encoding scheme, see i386 manual.
  */
 
+
+struct SREG{
+                uint16_t selector;
+                union {
+                        struct {
+                                uint32_t seg_base1 :16;
+                                uint32_t seg_base2 :8;
+                                uint32_t seg_base3 :8;
+                        };
+                        uint32_t seg_base;
+                };
+                union {
+                        struct {
+                                uint32_t seg_limit1 :16;
+                                uint32_t seg_limit2 :4;
+                                uint32_t seg_limit3 :12;
+                        };
+                        uint32_t seg_limit;
+                };
+};
+
+
 typedef struct {
      union{
         union {
@@ -29,6 +51,12 @@ typedef struct {
             uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;
         };
      };
+
+struct GDTR{
+                uint32_t base_addr;
+                uint16_t seg_limit;
+}gdtr;
+
 
      swaddr_t eip;
 
@@ -56,10 +84,47 @@ typedef struct {
     uint32_t EFLAGS;
 };
 
+union {
+                struct SREG sr[6];
+                struct
+                {
+            struct SREG es, cs, ss, ds, fs, gs;
+                };
+};
+
+
 } CPU_state;
+
+typedef struct {
+        union {
+                struct {
+                        uint32_t seg_limit1     :16;
+                        uint32_t seg_base1      :16;
+                };
+                uint32_t first_part;
+        };
+        union {
+                struct {
+                        uint32_t seg_base2      :8;
+                        uint32_t type           :5;
+                        uint32_t dpl            :2;
+                        uint32_t p              :1;
+                        uint32_t seg_limit2     :4;
+                        uint32_t avl            :1;
+                        uint32_t                :1;
+                        uint32_t b              :1;
+                        uint32_t g              :1;
+                        uint32_t seg_base3      :8;
+                };
+                uint32_t second_part;
+        };
+}SEG_descriptor;
+
 
 extern CPU_state cpu;
 int8_t current_sreg;
+SEG_descriptor *seg_des;
+
 
 static inline int check_reg_index(int index) {
 	assert(index >= 0 && index < 8);
