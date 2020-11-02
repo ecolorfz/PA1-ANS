@@ -37,6 +37,7 @@
 #include "trans/jne.h"
 #include "trans/jmp.h"
 #include "trans/jbe.h"
+#include "trans/jge.h"
 #include "trans/jle.h"
 #include "trans/jg.h"
 #include "trans/jl.h"
