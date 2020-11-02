@@ -56,7 +56,7 @@ clean: clean-cpp
 	+++ Makefile
 	@@ -56,2 +56,2 @@
 
-USERPROG = obj/testcase/add-longlong
+USERPROG = obj/testcase/bit
 ENTRY := $(USERPROG)
 
 entry: $(ENTRY)
