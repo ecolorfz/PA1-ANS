@@ -27,6 +27,7 @@
 #include "logic/shl.h"
 #include "logic/shr.h"
 #include "logic/shrd.h"
+#include "logic/sete.h"
 
 #include "trans/call.h"
 #include "data-mov/push.h"
