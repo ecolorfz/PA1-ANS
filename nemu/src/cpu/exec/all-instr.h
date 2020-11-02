@@ -33,6 +33,7 @@
 #include "logic/test.h"
 #include "trans/je.h"
 #include "trans/jmp.h"
+#include "trans/jbe.h"
 #include "data-mov/pop.h"
 #include "trans/ret.h"
 
