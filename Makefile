@@ -56,7 +56,7 @@ clean: clean-cpp
 	+++ Makefile
 	@@ -56,2 +56,2 @@
 
-USERPROG = obj/testcase/leap-year
+USERPROG = obj/testcase/max
 ENTRY := $(USERPROG)
 
 entry: $(ENTRY)
